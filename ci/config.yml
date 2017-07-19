@@ -7,8 +7,12 @@ global:
     - eu-central-1
     - eu-west-1
     - us-east-1
+    - us-east-2
   reporting: true
 tests:
-  public:
-    parameter_input: aws-vpc-public.json
+  defaults:
+    regions:
+      - eu-west-1
+      - us-east-1
+    parameter_input: aws-vpc-defaults.json
     template_file: aws-vpc.template
